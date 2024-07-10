@@ -1,6 +1,14 @@
 import { MapPin, Calendar, ArrowRight } from 'lucide-react'
+import { useState } from 'react';
 
 export function App() {
+
+  const [isGuestsInputOpen, setIsGuestsInputOpen  ] = useState(false);
+
+  function openGuestsInput(){
+    setIsGuestsInputOpen(true);
+  }
+
   return (
     <div className="h-screen flex items-center justify-center bg-pattern bg-no-repeat bg-center">
       <div className="max-w-3xl w-full  px-6 text-center space-y-10">
@@ -22,7 +30,7 @@ export function App() {
 
           <div className="w-px h-6 bg-zinc-800"></div>
           
-          <button className="bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400">
+          <button onClick={openGuestsInput} className="bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex items-center gap-2 hover:bg-lime-400">
             Continuar
             <ArrowRight className="size-5" />
           </button>
