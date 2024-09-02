@@ -9,5 +9,19 @@
 
 
 
+@layer components {
+    .hide-date-indicator {
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+}
 
 
+@layer components {
+    .hide-clock-indicator {
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+}
