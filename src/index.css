@@ -25,3 +25,10 @@
       }
     }
 }
+
+
+.rdp-root {
+  --rdp-accent-color: #BEF264; 
+  --rdp-accent-background-color: #1A2E05; 
+ 
+}

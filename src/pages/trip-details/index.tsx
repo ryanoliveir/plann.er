@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Settings2, Plus, CircleCheck, Link2, UserCog, CircleDashed } from "lucide-react";
+import { Plus } from "lucide-react";
 import { CreateActivityModal } from "./create-activity-modal";
 import { useState } from "react";
 import { ImportantLinks } from "./important-links";
