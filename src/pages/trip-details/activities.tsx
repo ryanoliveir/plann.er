@@ -18,7 +18,6 @@ export function Activities() {
   const { tripId } = useParams();
   const [activities, setActivities] = useState<Activity[]>([]);
 
-  console.log(activities);
   useEffect(() => {
     api
       .get(`/trips/${tripId}/activities`)
@@ -40,10 +39,10 @@ export function Activities() {
             </div>
 
             {category.activities.length > 0 ? (
-              <div>
+              <div className="space-y-2.5">
                 {category.activities.map((activity) => {
                   return (
-                    <div className="space-y-2.5">
+                    <div className="space-y-2.5" key={activity.id}>
                       {/* <div className="px-4 py-2.5 h-10 bg-zinc-900 rounded-xl flex items-center justify-between"> */}
                       <div className="px-4 py-2.5 h-10 bg-zinc-900 rounded-xl flex items-center gap-3">
                         <CircleCheck className="size-5 text-lime-300" />
